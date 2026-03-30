@@ -1,1 +1,30 @@
+menuitem:hover,
+menuitem[_moz-menuactive="true"] {
+  background: var(--solace-surface-hover) !important;
+  color: var(--solace-text) !important;
+}
 
+/* ── Disabled пункт ── */
+menuitem[disabled="true"] {
+  color: var(--solace-text-muted) !important;
+}
+
+/* ── Сепаратор ── */
+menuseparator {
+  border-color: var(--solace-border) !important;
+  margin: 4px 6px !important;
+}
+
+/* ── Підменю ── */
+menu {
+  border-radius: var(--solace-radius-item) !important;
+  padding: 6px 10px !important;
+  color: var(--solace-text) !important;
+  background: transparent !important;
+}
+
+menu:hover,
+menu[_moz-menuactive="true"] {
+  background: var(--solace-surface-hover) !important;
+  color: var(--solace-text) !important;
+}
