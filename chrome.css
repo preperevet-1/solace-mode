@@ -14,7 +14,7 @@
 
 /* ── Контейнер меню ── */
 menupopup {
-  background: #242424 !important;
+  background: #ffffff !important;
   border: 1px solid var(--solace-border) !important;
   border-radius: var(--solace-radius) !important;
   padding: 4px !important;
