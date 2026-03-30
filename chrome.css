@@ -1,57 +1,29 @@
-/* Solace - chrome.css */
-
-:root {
-  --solace-radius: 24px;
-  --solace-radius-item: 16px;
-  --solace-surface: #242424;
-  --solace-border: rgba(255, 255, 255, 0.08);
-  --solace-hover: rgba(255, 255, 255, 0.08);
-  --solace-text: #e0e0e0;
-  --solace-text-muted: #666666;
-}
-
-/* ── Контейнер меню (правильний спосіб) ── */
-menupopup::part(content),
-panel::part(content) {
-  background: var(--solace-surface) !important;
-  border: 1px solid var(--solace-border) !important;
-  border-radius: var(--solace-radius) !important;
-  padding: 4px !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
-}
-
-/* ── Пункти меню ── */
-menuitem,
-menu,
-menucaption {
-  border-radius: var(--solace-radius-item) !important;
-  padding: 5px 12px !important;
-  color: var(--solace-text) !important;
-  background: transparent !important;
-}
-
-menuitem:hover,
-menuitem[_moz-menuactive="true"],
-menu:hover,
-menu[_moz-menuactive="true"] {
-  background: var(--solace-hover) !important;
-  color: #ffffff !important;
-}
-
-/* ── Disabled ── */
-menuitem[disabled="true"] {
-  color: var(--solace-text-muted) !important;
-  background: transparent !important;
-}
-
-/* ── Сепаратори — прибрані ── */
-menuseparator {
-  display: none !important;
-}
-
-/* ── Чекбокси — прибрані ── */
-menuitem > .menu-iconic-left,
-menuitem[checked] .menu-iconic-left,
-menuitem[type="checkbox"] .menu-iconic-left {
-  display: none !important;
-}
+  menupopup,
+  panel {
+    &::part(content) {
+      display: flex !important;
+      box-sizing: border-box !important;
+      padding: 6px !important;
+      color: var(--panel-color) !important;
+      border-radius: 15px !important;
+      border: 2px solid
+        color-mix(in hsl, var(--panel-border-color), transparent 70%) !important;
+      width: var(--panel-width) !important;
+      box-shadow: var(--panel-shadow) !important;
+      margin: var(--panel-shadow-margin) !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      max-height: round(
+        up,
+        100% - 2 * var(--panel-shadow-margin),
+        1px
+      ) !important;
+      max-width: round(
+        up,
+        100% - 2 * var(--panel-shadow-margin),
+        1px
+      ) !important;
+      overflow: clip !important;
+      scrollbar-color: transparent !important;
+    }
+  }
