@@ -1,44 +1,40 @@
 /* Solace - chrome.css */
 
 :root {
-  --solace-accent: #8b9daa;
-  --solace-bg: #1a1a1a;
-  --solace-surface: #222222;
-  --solace-surface-hover: rgba(255, 255, 255, 0.08);
+  --solace-radius: 12px;
+  --solace-radius-item: 8px;
+  --solace-surface: #242424;
+  --solace-border: rgba(255, 255, 255, 0.08);
+  --solace-hover: rgba(255, 255, 255, 0.08);
   --solace-text: #e0e0e0;
   --solace-text-muted: #666666;
-  --solace-border: #fafafa;
-  --solace-radius: 16px;
-  --solace-radius-item: 10px;
 }
 
-/* ── Контейнер меню ── */
-menupopup {
-  background: #ffffff !important;
+/* ── Контейнер меню (правильний спосіб) ── */
+menupopup::part(content),
+panel::part(content) {
+  background: var(--solace-surface) !important;
   border: 1px solid var(--solace-border) !important;
   border-radius: var(--solace-radius) !important;
   padding: 4px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
-  -moz-appearance: none !important;  /* ← це прибирає нативний фон */
-  appearance: none !important;
-}
 }
 
-/* ── Пункт меню ── */
+/* ── Пункти меню ── */
 menuitem,
-menu {
+menu,
+menucaption {
   border-radius: var(--solace-radius-item) !important;
   padding: 5px 12px !important;
   color: var(--solace-text) !important;
   background: transparent !important;
-  min-height: unset !important;
 }
 
 menuitem:hover,
 menuitem[_moz-menuactive="true"],
 menu:hover,
 menu[_moz-menuactive="true"] {
-  background: var(--solace-surface-hover) !important;
+  background: var(--solace-hover) !important;
   color: #ffffff !important;
 }
 
@@ -48,14 +44,13 @@ menuitem[disabled="true"] {
   background: transparent !important;
 }
 
-/* ── Сепаратори — повністю прибрані ── */
+/* ── Сепаратори — прибрані ── */
 menuseparator {
   display: none !important;
 }
 
-/* ── Чекбокси в меню ── */
+/* ── Чекбокси — прибрані ── */
 menuitem > .menu-iconic-left,
-menuitem .menuitem-icon,
 menuitem[checked] .menu-iconic-left,
 menuitem[type="checkbox"] .menu-iconic-left {
   display: none !important;
