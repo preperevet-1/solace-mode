@@ -7,9 +7,9 @@
   --solace-surface-hover: rgba(255, 255, 255, 0.08);
   --solace-text: #e0e0e0;
   --solace-text-muted: #666666;
-  --solace-border: #2e2e2e;
-  --solace-radius: 12px;
-  --solace-radius-item: 8px;
+  --solace-border: #fafafa;
+  --solace-radius: 16px;
+  --solace-radius-item: 10px;
 }
 
 /* ── Контейнер меню ── */
@@ -47,5 +47,13 @@ menuitem[disabled="true"] {
 
 /* ── Сепаратори — повністю прибрані ── */
 menuseparator {
+  display: none !important;
+}
+
+/* ── Чекбокси в меню ── */
+menuitem > .menu-iconic-left,
+menuitem .menuitem-icon,
+menuitem[checked] .menu-iconic-left,
+menuitem[type="checkbox"] .menu-iconic-left {
   display: none !important;
 }
