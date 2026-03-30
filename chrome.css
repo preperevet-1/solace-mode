@@ -1,8 +1,8 @@
 /* Solace - chrome.css */
 
 :root {
-  --solace-radius: 12px;
-  --solace-radius-item: 8px;
+  --solace-radius: 24px;
+  --solace-radius-item: 16px;
   --solace-surface: #242424;
   --solace-border: rgba(255, 255, 255, 0.08);
   --solace-hover: rgba(255, 255, 255, 0.08);
