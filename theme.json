@@ -1,0 +1,11 @@
+{
+  "name": "Solace",
+  "description": "Less noise, more focus",
+  "version": "0.0.1",
+  "author": "preperevet-1",
+  "homepage": "https://github.com/preperevet-1/solace",
+  "files": {
+    "chrome": "chrome.css",
+    "js": "solace.js"
+  }
+}
